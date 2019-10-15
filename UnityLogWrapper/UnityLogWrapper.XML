@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnityLogWrapper</name>
+    </assembly>
+    <members>
+        <member name="T:Debug">
+            <summary>
+            Class containing methods to ease debugging while developing a game.
+            Methods are called only if "LOGGING" define is added to Scripting Define Symbols in Player Settings.
+            </summary>
+        </member>
+        <member name="P:Debug.developerConsoleVisible">
+            <summary>
+            Reports whether the development console is visible.
+            The development console cannot be made to appear using:
+            </summary>
+        </member>
+        <member name="P:Debug.isDebugBuild">
+            <summary>
+            In the Build Settings dialog there is a check box called "Development Build".
+            </summary>
+        </member>
+        <member name="P:Debug.logger">
+            <summary>
+            Get default debug logger.
+            </summary>
+        </member>
+        <member name="M:Debug.Assert(System.Boolean)">
+            <summary>
+            Assert a condition and logs an error message to the Unity console on failure.
+            </summary>
+            <param name="condition">Condition you expect to be true.</param>
+        </member>
+        <member name="M:Debug.Assert(System.Boolean,System.String)">
+            <summary>
+            Assert a condition and logs an error message to the Unity console on failure.
+            </summary>
+            <param name="condition">Condition you expect to be true.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+        </member>
+        <member name="M:Debug.Assert(System.Boolean,System.Object)">
+            <summary>
+            Assert a condition and logs an error message to the Unity console on failure.
+            </summary>
+            <param name="condition">Condition you expect to be true.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+        </member>
+        <member name="M:Debug.Assert(System.Boolean,UnityEngine.Object)">
+            <summary>
+            Assert a condition and logs an error message to the Unity console on failure.
+            </summary>
+            <param name="condition">Condition you expect to be true.</param>
+            <param name="context">Object to which the message applies.</param>
+        </member>
+        <member name="M:Debug.Assert(System.Boolean,System.Object,UnityEngine.Object)">
+            <summary>
+            Assert a condition and logs an error message to the Unity console on failure.
+            </summary>
+            <param name="condition">Condition you expect to be true.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="context">Object to which the message applies.</param>
+        </member>
+        <member name="M:Debug.AssertFormat(System.Boolean,System.String,System.Object[])">
+            <summary>
+            Assert a condition and logs a formatted error message to the Unity console on failure.
+            </summary>
+            <param name="condition">Condition you expect to be true.</param>
+            <param name="format">A composite format string.</param>
+            <param name="args">Format arguments.</param>
+        </member>
+        <member name="M:Debug.AssertFormat(System.Boolean,UnityEngine.Object,System.String,System.Object[])">
+            <summary>
+            Assert a condition and logs a formatted error message to the Unity console on failure.
+            </summary>
+            <param name="condition">Condition you expect to be true.</param>
+            <param name="context">Object to which the message applies.</param>
+            <param name="format">A composite format string.</param>
+            <param name="args">Format arguments.</param>
+        </member>
+        <member name="M:Debug.Break">
+            <summary>
+            Pauses the editor.
+            </summary>
+        </member>
+        <member name="M:Debug.ClearDeveloperConsole">
+            <summary>
+            Clears errors from the developer console.
+            </summary>
+        </member>
+        <member name="M:Debug.DrawLine(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+            Draws a line between specified start and end points.
+            </summary>
+            <param name="start">Point in world space where the line should start.</param>
+            <param name="end">Point in world space where the line should end.</param>
+        </member>
+        <member name="M:Debug.DrawLine(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color)">
+            <summary>
+            Draws a line between specified start and end points.
+            </summary>
+            <param name="start">Point in world space where the line should start.</param>
+            <param name="end">Point in world space where the line should end.</param>
+            <param name="color">Color of the line.</param>
+        </member>
+        <member name="M:Debug.DrawLine(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color,System.Single)">
+            <summary>
+            Draws a line between specified start and end points.
+            </summary>
+            <param name="start">Point in world space where the line should start.</param>
+            <param name="end">Point in world space where the line should end.</param>
+            <param name="color">Color of the line.</param>
+            <param name="duration">How long the line should be visible for.</param>
+        </member>
+        <member name="M:Debug.DrawLine(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color,System.Single,System.Boolean)">
+            <summary>
+            Draws a line between specified start and end points.
+            </summary>
+            <param name="start">Point in world space where the line should start.</param>
+            <param name="end">Point in world space where the line should end.</param>
+            <param name="color">Color of the line.</param>
+            <param name="duration">How long the line should be visible for.</param>
+            <param name="depthTest">Should the line be obscured by objects closer to the camera?</param>
+        </member>
+        <member name="M:Debug.DrawRay(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+            Draws a line from start to start + dir in world coordinates.
+            </summary>
+            <param name="start">Point in world space where the ray should start.</param>
+            <param name="dir">Direction and length of the ray.</param>
+        </member>
+        <member name="M:Debug.DrawRay(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color)">
+            <summary>
+            Draws a line from start to start + dir in world coordinates.
+            </summary>
+            <param name="start">Point in world space where the ray should start.</param>
+            <param name="dir">Direction and length of the ray.</param>
+            <param name="color">Color of the drawn line.</param>
+        </member>
+        <member name="M:Debug.DrawRay(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color,System.Single)">
+            <summary>
+            Draws a line from start to start + dir in world coordinates.
+            </summary>
+            <param name="start">Point in world space where the ray should start.</param>
+            <param name="dir">Direction and length of the ray.</param>
+            <param name="color">Color of the drawn line.</param>
+            <param name="duration">How long the line will be visible for (in seconds).</param>
+        </member>
+        <member name="M:Debug.DrawRay(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color,System.Single,System.Boolean)">
+            <summary>
+            Draws a line from start to start + dir in world coordinates.
+            </summary>
+            <param name="start">Point in world space where the ray should start.</param>
+            <param name="dir">Direction and length of the ray.</param>
+            <param name="color">Color of the drawn line.</param>
+            <param name="duration">How long the line will be visible for (in seconds).</param>
+            <param name="depthTest">Should the line be obscured by other objects closer to the camera?</param>
+        </member>
+        <member name="M:Debug.Log(System.Object)">
+            <summary>
+            Logs message to the Unity Console.
+            </summary>
+            <param name="message">String or object to be converted to string representation for display.</param>
+        </member>
+        <member name="M:Debug.Log(System.Object,UnityEngine.Object)">
+            <summary>
+            Logs message to the Unity Console.
+            </summary>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="context">Object to which the message applies.</param>
+        </member>
+        <member name="M:Debug.LogAssertion(System.Object)">
+            <summary>
+            A variant of Debug.Log that logs an assertion message to the console.
+            </summary>
+            <param name="message">String or object to be converted to string representation for display.</param>
+        </member>
+        <member name="M:Debug.LogAssertion(System.Object,UnityEngine.Object)">
+            <summary>
+            A variant of Debug.Log that logs an assertion message to the console.
+            </summary>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="context">Object to which the message applies.</param>
+        </member>
+        <member name="M:Debug.LogAssertionFormat(System.String,System.Object[])">
+            <summary>
+            Logs a formatted assertion message to the Unity console.
+            </summary>
+            <param name="format">A composite format string.</param>
+            <param name="args">Format arguments.</param>
+        </member>
+        <member name="M:Debug.LogAssertionFormat(UnityEngine.Object,System.String,System.Object[])">
+            <summary>
+            Logs a formatted assertion message to the Unity console.
+            </summary>
+            <param name="context">Object to which the message applies.</param>
+            <param name="format">A composite format string.</param>
+            <param name="args">Format arguments.</param>
+        </member>
+        <member name="M:Debug.LogError(System.Object)">
+            <summary>
+            A variant of Debug.Log that logs an error message to the console.
+            </summary>
+            <param name="message">String or object to be converted to string representation for display.</param>
+        </member>
+        <member name="M:Debug.LogError(System.Object,UnityEngine.Object)">
+            <summary>
+            A variant of Debug.Log that logs an error message to the console.
+            </summary>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="context">Object to which the message applies.</param>
+        </member>
+        <member name="M:Debug.LogErrorFormat(System.String,System.Object[])">
+            <summary>
+            Logs a formatted error message to the Unity console.
+            </summary>
+            <param name="format">A composite format string.</param>
+            <param name="args">Format arguments.</param>
+        </member>
+        <member name="M:Debug.LogErrorFormat(UnityEngine.Object,System.String,System.Object[])">
+            <summary>
+            Logs a formatted error message to the Unity console.
+            </summary>
+            <param name="context">Object to which the message applies.</param>
+            <param name="format">A composite format string.</param>
+            <param name="args">Format arguments.</param>
+        </member>
+        <member name="M:Debug.LogException(System.Exception)">
+            <summary>
+            A variant of Debug.Log that logs an error message to the console.
+            </summary>
+            <param name="exception">Runtime Exception.</param>
+        </member>
+        <member name="M:Debug.LogException(System.Exception,UnityEngine.Object)">
+            <summary>
+            A variant of Debug.Log that logs an error message to the console.
+            </summary>
+            <param name="exception">Runtime Exception.</param>
+            <param name="context">Object to which the message applies.</param>
+        </member>
+        <member name="M:Debug.LogFormat(System.String,System.Object[])">
+            <summary>
+            Logs a formatted message to the Unity Console.
+            </summary>
+            <param name="format">A composite format string.</param>
+            <param name="args">Format arguments.</param>
+        </member>
+        <member name="M:Debug.LogFormat(UnityEngine.Object,System.String,System.Object[])">
+            <summary>
+            Logs a formatted message to the Unity Console.
+            </summary>
+            <param name="context">Object to which the message applies.</param>
+            <param name="format">A composite format string.</param>
+            <param name="args">Format arguments.</param>
+        </member>
+        <member name="M:Debug.LogWarning(System.Object)">
+            <summary>
+            A variant of Debug.Log that logs a warning message to the console.
+            </summary>
+            <param name="message">String or object to be converted to string representation for display.</param>
+        </member>
+        <member name="M:Debug.LogWarning(System.Object,UnityEngine.Object)">
+            <summary>
+            A variant of Debug.Log that logs a warning message to the console.
+            </summary>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="context">Object to which the message applies.</param>
+        </member>
+        <member name="M:Debug.LogWarningFormat(System.String,System.Object[])">
+            <summary>
+            Logs a formatted warning message to the Unity Console.
+            </summary>
+            <param name="format">A composite format string.</param>
+            <param name="args">Format arguments.</param>
+        </member>
+        <member name="M:Debug.LogWarningFormat(UnityEngine.Object,System.String,System.Object[])">
+            <summary>
+            Logs a formatted warning message to the Unity Console.
+            </summary>
+            <param name="context">Object to which the message applies.</param>
+            <param name="format">A composite format string.</param>
+            <param name="args">Format arguments.</param>
+        </member>
+    </members>
+</doc>
